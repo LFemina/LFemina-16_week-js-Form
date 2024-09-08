@@ -1,0 +1,38 @@
+.about-user-info {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 22rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: 1rem;
+    width: 20rem;
+}
+
+.radio-group {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.agreeTerms {
+    margin-left: 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 1.7rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-color: bisque;
+    background-color: bisque;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myForm" class="myForm" novalidate>
+        <fieldset class="about-user-info">
+            <legend class="about-user-info">Форма регистрации</legend>
+            <div class="form-group">
+                <label class="label" for="name">Введите Ваше имя (не менее 2-х и не более 20 символов) *:</label>
+                <input type="text" class="input" name="name" id="name" placeholder="Ваше имя" required>
+                <p id="errorName" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="email">Введите Вашу почту *:</label>
+                <input type="email" class="input" name="email" id="email" placeholder="Email" required>
+                <p id="errorEmail" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="age">Укажите Ваш возраст (от 1 до 100) *:</label>
+                <input type="number" class="input" name="age" id="age" max="100" min="1" placeholder="Ваш возраст"
+                    required>
+                <p id="errorAge" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Укажите Ваш пол *:</label>
+                <div class="radio-group">
+                    Женский<input type="radio" name="sex" class="input" required>
+                </div>
+                <div class="radio-group">
+                    Мужской<input type="radio" name="sex" class="input" required>
+                </div>
+                <p id="errorSex" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="select">Выберите Вашу профессию *:</label>
+                <select name="select" id="select" class="input" required>
+                    <option value="" disabled selected hidden>Выберите профессию:</option>
+                    <option value="doctor">Врач</option>
+                    <option value="programmer">Программист</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="engineer">Инженер</option>
+                    <option value="salesman">Продавец</option>
+                    <option value="other">Другое</option>
+                </select>
+                <p id="errorSelect" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="password">Введите Ваш пароль (не менее 8 символов, одной заглавной и строчной
+                    латинской
+                    буквы, одной цифры) *:</label>
+                <input type="password" name="password" id="password" class="input" placeholder="Ваш пароль"
+                    minlength="8" required>
+                <p id="errorPassword" class="error"></p>
+            </div>
+
+            <div class="radio-group agreeTerms">
+                <label class="label" for="agreeTerms">Я согласен с условиями *:</label>
+                <input type="checkbox" class="input" name="agreeTerms" id="agreeTerms" required>
+                <p id="errorAgreeTerms" class="error"></p>
+            </div>
+
+            <button type="submit" class="btn" id="submitBtn" onclick="checkAll()">Отправить</button>
+        </fieldset>
+    </form>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
